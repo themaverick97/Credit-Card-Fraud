@@ -1,2 +1,3 @@
 # Credit-Card-Fraud
-project
+!pip install numpy
+!pip install pandas
