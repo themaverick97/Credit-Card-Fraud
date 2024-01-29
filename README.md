@@ -11,12 +11,46 @@ transactions so that customers are not charged for items that they did not purch
 
 ## Appendix
 
-1.Importing the required libraries
-2.Exploratory Data Analysis(EDA)
-3.Data sampling
-4.Scaling
-5.Selecting the Independent and Dependent Variable
-6.Spliting Dataset into Train and Test
-7.Dealing with Imbalanced Data
-8. Training the ML Model
-9.Model validation
+- Importing the required libraries
+- Exploratory Data Analysis(EDA)
+- Data sampling
+- Scaling
+- Selecting the Independent and Dependent Variable
+- Spliting Dataset into Train and Test
+- Dealing with Imbalanced Data
+- Training the ML Model
+- Model validation
+## Importing
+
+Importing libraries 
+
+```bash
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import RobustScaler
+from sklearn.model_selection import train_test_split
+from imblearn.over_sampling import SMOTE
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import auc, roc_auc_score,roc_curve
+from sklearn.metrics import ConfusionMatrixDisplay
+from sklearn.metrics import classification_report,accuracy_score
+from sklearn.ensemble import IsolationForest
+from sklearn.neighbors import LocalOutlierFactor
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import GridSearchCV
+```
+    
+## Documentation
+
+For ML model-IsolationForest [Documentation](https://scikit-learn.org/stable/modules/outlier_detection.html#isolation-forest)
+
+For ML model-LocalOutliersFactor [Documentation](https://scikit-learn.org/stable/auto_examples/neighbors/plot_lof_outlier_detection.)
+
+
+
+
+
+
