@@ -119,6 +119,27 @@ model.fit(X_train,y_train)
                                               leaf_size=30, metric='minkowski',
                                               p=2, metric_params=None, contamination=outlier_fraction)
 ```
+## Model validation
+For the model validation I used the Accuracy and the Classfication Report
+```bash
+accuracy = accuracy_score(y_test, y_pred_lr)
+print("Accuracy on the test set:", accuracy)
+cr=classification_report(y_test,y_pred_lr)
+print(cr)
+n_errors=(y_pred_lr !=y_test).sum()
+print("{}: {}".format(model,n_errors))
+```
+## Make a prediction on Fraud or Valid
+As give values to the Function and it predicts the transcation if it Fraud or valid
+```bash
+def pred(data):
+    data = np.asarray(data).reshape(1,-1)
+    predd = model.predict(data)
+    if predd == 0:
+        print("it's a Valid Transcation")
+    else:
+        print("it's a fraudulent Transcation")
+```
 ## Documentation
 
 For ML model-IsolationForest [Documentation](https://scikit-learn.org/stable/modules/outlier_detection.html#isolation-forest)
