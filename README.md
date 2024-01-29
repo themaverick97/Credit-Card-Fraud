@@ -89,7 +89,7 @@ As the data given was higly Imbalanced.In this I am using SMOTE(overfiiting)meth
 smote = SMOTE(random_state=42)
 X_train_smote, y_train_smote = smote.fit_resample(X_train,y_train)
 ```
-## Model Traing
+## Model Training
 In Model Traing I have used Randomforest,LogisticRegression,LocalOutlierFactor,IsolationForest for the best Model
 ## Randomforest
 ```bash
